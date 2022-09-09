@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <link rel="stylesheet" href="main.css"> -->
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
+
+    <link rel="icon" type="image/png" href="https://assets.coingecko.com/coins/images/1/thumb/bitcoin.png?1547033579">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+    <title>MOONDAY</title>
+</head>
+<header>
+    <div class="headerr">
+        <h1 data-text="cryptobot"> MOONDAY</h1>
+    </div>
+</header>
+<body>
+    <main>
+        <div class="contenedor">
+            <div class="tablasize">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>
+                                <h1>N°</h1> 
+                            </th>
+                            <th></th>
+                            <th>
+                                <div>
+                                    <h1>COIN</h1>
+                                </div>
+                            </th>
+                            <th></th>
+                            <th>
+                                <h1>PRICE</h1>
+                            </th>
+                            <th>
+                                <H1>HIGHER</H1>
+                            </th>
+                            <th>
+                                <h1>LOWER</h1>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>
+                        </td>
+                        <td class="numerador">
+                            <h1> 1 </h1>
+                        </td>
+                        <td>
+                            <div class="btc">
+                                <div class="logo">
+                                    <img class="imagen" width="20" height="20" src="https://assets.coingecko.com/coins/images/1/thumb/bitcoin.png?1547033579">
+                                </div>
+                        </td>
+                        <td>
+                                <div class="btcnombre">
+                                    <span class="nombremoneda"> <h1>Bitcoin</h1><h2>BTC</h2> </span>
+                                </div>
+                            </div>
+                        </td>
+                        <td></td>
+                        <td>
+                            <span class="price" > {{ abtc }} USD</span>
+                        </td>
+                        <td>
+                            <span class="maximo"> {{ btc_high }} USD</span>
+                        </td>
+                        <td>
+                            <span class="minimo"> {{ btc_low }} USD</span>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td>
+                        </td>
+                        <td class="numerador">
+                            <h1> 2 </h1>
+                        </td>
+                        <td>
+                            <div class="btc">
+                                <div class="logo">
+                                    <img loading="lazy" class="mr-0 tw-h-5 tw-w-5 tw-overflow-hidden" width="20" height="20" src="https://assets.coingecko.com/coins/images/279/thumb/ethereum.png?1595348880">
+                                </div>
+                        </td>
+                        <td>
+                                <div class="btcnombre">
+                                    <span class="nombremoneda"> <h1>Ethereum</h1><h2>ETH</h2> </span>
+                                </div>
+                            </div>
+                        </td>
+                        <td></td>
+                        <td>
+                            <span class="price" > {{ aeth }} USD</span>
+                        </td>
+                        <td>
+                            <span class="maximo"> {{ eth_high }} USD</span>
+                        </td>
+                        <td>
+                            <span class="minimo"> {{ eth_low }} USD</span>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td>
+                        </td>
+                        <td class="numerador">
+                            <h1> 3 </h1>
+                        </td>
+                        <td>
+                            <div class="btc">
+                                <div class="logo">
+                                    <img class="tw-rounded-full" width="20" height="20" src="https://assets.coingecko.com/coins/images/4128/small/solana.png?1640133422">
+                                </div>
+                        </td>
+                        <td>
+                                <div class="btcnombre">
+                                    <span class="nombremoneda"> <h1>Solana</h1><h2>SOL</h2> </span>
+                                </div>
+                            </div>
+                        </td>
+                        <td></td>
+                        <td>
+                            <span class="price" > {{ asol }} USD</span>
+                        </td>
+                        <td>
+                            <span class="maximo"> {{ sol_high }} USD</span>
+                        </td>
+                        <td>
+                            <span class="minimo"> {{ sol_low }} USD</span>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td>
+                        </td>
+                        <td class="numerador">
+                            <h1> 4 </h1>
+                        </td>
+                        <td>
+                            <div class="btc">
+                                <div class="logo">
+                                    <img class="tw-rounded-full" width="20" height="20" src="https://assets.coingecko.com/coins/images/975/small/cardano.png?1547034860">
+                                </div>
+                        </td>
+                        <td>
+                                <div class="btcnombre">
+                                    <span class="nombremoneda"> <h1>Cardano</h1><h2>ADA</h2> </span>
+                                </div>
+                            </div>
+                        </td>
+                        <td></td>
+                        <td>
+                            <span class="price" > {{ aada }} USD</span>
+                        </td>
+                        <td>
+                            <span class="maximo"> {{ ada_high }} USD</span>
+                        </td>
+                        <td>
+                            <span class="minimo"> {{ ada_low }} USD</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+    
+            <div class="tablasizenews">
+                <table class="tablenews">
+                    <thead>
+                        <tr>
+                            <th><h1>NEWS</h1></th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>
+                            <a href="{{ url }}" target='_blank'>{{ msg }}</a> 
+                        </td>
+                    </tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr>
+                        <td>
+                            <a href="{{ url2 }}" target='_blank'>{{ msg2 }}</a>
+                        </td>
+                    </tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr>
+                        <td>
+                            <a href="{{ url3 }}" target='_blank'>{{ msg3 }}</a>
+                        </td>
+                    </tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr>
+                        <td>
+                            <a href="{{ url4 }}" target='_blank'>{{ msg4 }}</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+    
+            </div>
+        </div>
+
+        <div class="telegram">
+            <a href="https://t.me/+mpvL7wxx-GFkYmNh" target='_blank'>
+                <img src="{{url_for('static',filename = 'images/Telegramlogo2.png')}}"
+                width="70%"
+                height="70%"
+                alt="Telegram Group">
+            </a>
+        <!----
+            <button class="btn btn--2">
+                TELEGRAM BOT
+            </button>
+        --->
+        </div>
+
+        <video muted autoplay loop>
+            <source src= "{{url_for('static',filename = 'images/Fondo.mp4')}}"
+            type="video/mp4">
+        </video>
+        <div class="capa">
+
+        </div>
+    </main>
+</body>
+</html>
